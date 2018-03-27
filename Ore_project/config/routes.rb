@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   # get '/posts/new', to: 'posts#new'
 
-  # get 'users/sign_out', to: 'devise/sessions#destroy'
+  devise_scope :user do
+  	get 'users/sign_out', to: 'devise/sessions#destroy'
+  end
   root to: 'posts#index'
 
 
