@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+	background-color: black;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	background-size: 120%;
+	margin-bottom: 10%;
+	background-image: url('/assets/background/DSC_0452.jpg');
+}
+
+.login-form {
+	margin-left: 100%;
+	margin-top: 20%;
+	width: 450px;
+	border: 1px solid black;
+	background-color: #424f59;
+}
+
+.login-form ul {
+	list-style-type: none;
+	padding-bottom: 50%;
+	padding-top: 30%;
+}
+
+.login-form ul li {
+	text-decoration: none;
+	font-size: 50px;
+	
+}
