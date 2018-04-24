@@ -1,6 +1,7 @@
 # README
 
 Using Devise gem for user authentication
+Using Thredded gem for forum
 
 
 
