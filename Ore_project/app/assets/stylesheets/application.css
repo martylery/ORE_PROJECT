@@ -14,6 +14,7 @@
  *= require_self
  */
 
+
 body {
 	background-image: url("../Pictures/Metapics/Black+Stone.jpg");
 	/*background-color: #fff;*/
@@ -146,6 +147,27 @@ h5 {
 
 #nav ul ul li:hover {
 	color: #099;
+}
+
+#contents {
+	border: 2px solid black;
+	background-color:black;
+	display: block;
+	position: relative;
+	width: 50%;
+	height: 95%;
+	margin: 0 auto;
+}
+
+#main_window {
+	/*border: 2px dotted yellow;*/
+	position: relative;
+	height: 2500px;
+	width: 1510px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+	z-index: 0;
 }
 
 

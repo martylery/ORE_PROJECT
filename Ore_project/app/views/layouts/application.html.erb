@@ -3,39 +3,49 @@
   <head>
     <title>Ore Official Website</title>
     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>Ore Official Website</title>
     <link rel="stylesheet", type="text/css", href="index_style.css">
     <script type="text/javascript", src="../Scripts/jquery-3.3.1.min.js"></script>
     <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
   </head>
-  
-  <body onload="mainMethod();">
+
+  <body>
+
   <div id="container">
       <div id = "nav">
         <div id="logo-wrapper"></div>
         <div id = "nav_wrapper">
           <ul>
-            <li><a href="index.html">Home</a></li><li>
-            <a>Our Team</a>
+            <!-- <li><a href="index.html">Home</a></li><li> -->
+            <li><%= link_to "Home", controller: "pages", action: "index"%></li>
+            <a href="/"><%= link_to "Our Team", controller: "pages", action: "our_team"%></a>
               <ul>
-                <li><a href="../Our Team/sound_managers.html">Sound Managers</a></li>
-                <li><a href="../Our Team/video_managers.html">Video Managers</a></li>
-                <li><a href="../Our Team/arts_managers.html">Arts Managers</a></li>
+                <!-- <li><a href="../Our Team/sound_managers.html">Sound Managers</a></li> -->
+                <li><%= link_to "Sound Managers", controller: "pages", action: "sound_managers"%>Sound Managers</li>
+                <!-- <li><a href="../Our Team/video_managers.html">Video Managers</a></li> -->
+                <li><%= link_to "Video Managers", controller: "pages", action: "video_managers" %>Video Managers</li>
+                <!-- <li><a href="../Our Team/arts_managers.html">Arts Managers</a></li> -->
+
+
               </ul>
-            </li><li>
+            </li>
+            <li>
             <a>Artists</a>
               <ul>
-                <li><a href="../Photography/photography_main.html">Photography</a></li>
-                <li><a href="../Music/music_main.html">Music</a></li>
-                <li><a href="../Arts/arts_main.html">Arts</a></li>
+                <!-- <li><a href="../Photography/photography_main.html">Photography</a></li> -->
+                <!-- <li><a href="../Music/music_main.html">Music</a></li> -->
+                <!-- <li><a href="../Arts/arts_main.html">Arts</a></li> -->
+                
               </ul>
 
             </li>
-              <li><a href="../Merch/merch.html">Merch</a></li>
-              <li><a href="../Contacts/contacts.html">Contacts</a></li>
-              <li><a href="../Forum/forum.html">Forum</a></li>
+              <!-- <li><a href="../Merch/merch.html">Merch</a></li> -->
+              <!-- <li><a href="../Contacts/contacts.html">Contacts</a></li> -->
+              <!-- <li><a href="../Forum/forum.html">Forum</a></li> -->
           </ul>
         </div>
       </div>
@@ -119,14 +129,10 @@
 
           </div>
         </div>
-        
-
-
-
-
-
         <div id = "contents">
           <!-- <h1 style="color:white">here is the recent news and updates tab</h1>  -->
+            
+          <!-- here should be added yielding -->
           <%= yield %>
 
         </div>  
@@ -137,21 +143,9 @@
     </div>
     
   </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-
-<!--   <body>
-  <div class="login-form">
-    <% if !user_signed_in? %>
-    <ul>
-      <li><%= link_to "Sign up", new_user_registration_path %></li>
-      <li><%= link_to "Sign in", new_user_session_path %></li>
-    </ul>
-    <% end %>
-  </div>
-
-  <% if user_signed_in? %>
-    <%= link_to "Log out", destroy_user_session_path %>
-  <% end %> -->
-
+    <%= yield %>
   </body>
 </html>
