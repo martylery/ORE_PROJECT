@@ -22,30 +22,38 @@
           <ul>
             <!-- <li><a href="index.html">Home</a></li><li> -->
             <li><%= link_to "Home", controller: "pages", action: "index"%></li>
-            <a href="/"><%= link_to "Our Team", controller: "pages", action: "our_team"%></a>
+            <li>
+              <a href="/"><%= link_to "Our Team", controller: "pages", action: "our_team"%></a>
               <ul>
                 <!-- <li><a href="../Our Team/sound_managers.html">Sound Managers</a></li> -->
-                <li><%= link_to "Sound Managers", controller: "pages", action: "sound_managers"%>Sound Managers</li>
+                <li><%= link_to "Sound Managers", controller: "pages", action: "sound_managers"%></li>
                 <!-- <li><a href="../Our Team/video_managers.html">Video Managers</a></li> -->
-                <li><%= link_to "Video Managers", controller: "pages", action: "video_managers" %>Video Managers</li>
+                <li><%= link_to "Video Managers", controller: "pages", action: "video_managers" %></li>
                 <!-- <li><a href="../Our Team/arts_managers.html">Arts Managers</a></li> -->
+                <li><%= link_to "Arts Managers", controller: "pages", action: "arts_managers" %></li>
 
 
               </ul>
             </li>
             <li>
-            <a>Artists</a>
+            <a href="/"><%= link_to "Artists", controller: "pages", action: "artists" %></a>
               <ul>
                 <!-- <li><a href="../Photography/photography_main.html">Photography</a></li> -->
+                <li><%= link_to "Photography", controller: "pages", action: "photographers"%></li>
                 <!-- <li><a href="../Music/music_main.html">Music</a></li> -->
+                <li><%= link_to "Music", controller: "pages", action: "musicians"%></li>
                 <!-- <li><a href="../Arts/arts_main.html">Arts</a></li> -->
+                <li><%= link_to "Arts", controller: "pages", action: "arts" %></li>
                 
               </ul>
 
             </li>
               <!-- <li><a href="../Merch/merch.html">Merch</a></li> -->
+              <li><%= link_to "Merch", controller: "pages", action: "merch"%></li>
               <!-- <li><a href="../Contacts/contacts.html">Contacts</a></li> -->
+
               <!-- <li><a href="../Forum/forum.html">Forum</a></li> -->
+
           </ul>
         </div>
       </div>
