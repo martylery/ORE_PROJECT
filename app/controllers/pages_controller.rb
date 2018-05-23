@@ -14,4 +14,28 @@ class PagesController < ApplicationController
 
 	def arts_managers
 	end
+
+
+
+	def artists
+	end
+
+	def photographers
+	end
+
+	def musicians
+	end
+
+	def arts
+	end
+
+	def merch
+	end
+
+	def contacts
+	end
+
+	def forum
+		# redirects to /forum
+	end
 end
