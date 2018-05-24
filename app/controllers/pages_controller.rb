@@ -36,6 +36,6 @@ class PagesController < ApplicationController
 	end
 
 	def forum
-		# redirects to /forum
+		redirect_to '/forum'
 	end
 end
