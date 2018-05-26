@@ -80,10 +80,11 @@
               <!-- <h5>Enoth Serpentien</h5> -->
               <!-- <li><img src="../Pictures/Artists/Bands/Enoth/Enoth_Serpentien.png"></li> -->
 
-              <% @artists.each do |a| %>
+              <% @artists each do |a| %>
                 <%= a.name %>
                 <%= a.bio %>
               <% end %>
+
             </ul>
           </div>
           <div id="new-releases">
