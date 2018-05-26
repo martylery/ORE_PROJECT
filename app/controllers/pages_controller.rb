@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
 	def index
+		
 	end
 
 	def our_team
