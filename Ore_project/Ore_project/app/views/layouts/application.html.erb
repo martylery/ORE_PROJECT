@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ore Official Website</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>Ore Official Website</title>
+    <link rel="stylesheet", type="text/css", href="index_style.css">
+    <script type="text/javascript", src="../Scripts/jquery-3.3.1.min.js"></script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+  </head>
+
+  <body>
+
+  <div id="container">
+      <div id = "nav">
+        <div id="logo-wrapper"></div>
+        <div id = "nav_wrapper">
+          <ul>
+            <!-- <li><a href="index.html">Home</a></li><li> -->
+            <li><%= link_to "Home", controller: "pages", action: "index"%></li>
+            <li>
+              <a href="/"><%= link_to "Our Team", controller: "pages", action: "our_team"%></a>
+              <ul>
+                <!-- <li><a href="../Our Team/sound_managers.html">Sound Managers</a></li> -->
+                <li><%= link_to "Sound Managers", controller: "pages", action: "sound_managers"%></li>
+                <!-- <li><a href="../Our Team/video_managers.html">Video Managers</a></li> -->
+                <li><%= link_to "Video Managers", controller: "pages", action: "video_managers" %></li>
+                <!-- <li><a href="../Our Team/arts_managers.html">Arts Managers</a></li> -->
+                <li><%= link_to "Arts Managers", controller: "pages", action: "arts_managers" %></li>
+
+
+              </ul>
+            </li>
+            <li>
+            <a href="/"><%= link_to "Artists", controller: "pages", action: "artists" %></a>
+              <ul>
+                <!-- <li><a href="../Photography/photography_main.html">Photography</a></li> -->
+                <li><%= link_to "Photography", controller: "pages", action: "photographers"%></li>
+                <!-- <li><a href="../Music/music_main.html">Music</a></li> -->
+                <li><%= link_to "Music", controller: "pages", action: "musicians"%></li>
+                <!-- <li><a href="../Arts/arts_main.html">Arts</a></li> -->
+                <li><%= link_to "Arts", controller: "pages", action: "arts" %></li>
+                
+              </ul>
+
+            </li>
+              <!-- <li><a href="../Merch/merch.html">Merch</a></li> -->
+              <li><%= link_to "Merch", controller: "pages", action: "merch"%></li>
+              <!-- <li><a href="../Contacts/contacts.html">Contacts</a></li> -->
+
+              <!-- <li><a href="../Forum/forum.html">Forum</a></li> -->
+
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div id = "main_window">  
+        
+
+        <div id="left-bar">
+          <div id="new-artists">
+            <h3 style="color:white">new artists</h3>
+            <br>
+            <ul id="artists-releases">
+              <h5>Cnyll</h5>
+              <li><img src="../Pictures/Artists/Bands/Cnyll/Cnyll Logo.jpg"></li>
+              <h5>Doubt For Endless Immersion</h5>
+              <li><img src="../Pictures/Artists/Bands/Doubt For Endless Immersion/Cover.jpg"></li>
+              <h5>Island Man</h5>
+              <li><img src="../Pictures/Artists/Bands/Island Man/Coverart-crop.jpg"></li>
+              <h5>Enoth Serpentien</h5>
+              <li><img src="../Pictures/Artists/Bands/Enoth/Enoth_Serpentien.png"></li>
+            </ul>
+          </div>
+          <div id="new-releases">
+            <h3 style="color:white">new material</h3>
+            <br>
+          <ul id="artists-releases">
+            <h5>Arcs</h5>
+              <li><img src="../Pictures/Events/untitled-2.jpg" alt=""></li>
+            <h5>dfei single release</h5>
+              <li><img src="../Pictures/Artists/Bands/Doubt For Endless Immersion/Pic with logo 1.jpg" alt=""></li>
+            <h5>Ivan Ganchev con exhibition</h5>
+              <li><img src="../Pictures/Artists/Photographers/Ivan Ganchev/danio.jpg" alt=""></li>
+            <h5>"arts" ft. dfei</h5>
+              <li><img src="../Pictures/Artists/Photographers/Martin Bozhinov/DSC_0452.jpg" alt=""></li>
+          </ul>
+          </div>
+
+        </div>
+
+      
+
+
+        <div id="right-bar">
+          <div id="highlights">
+            <h3 style="color:white">highlights</h3>
+            <img src="../Pictures/Events/MartinBozhinovArcsPoster.jpg">
+          </div>
+
+
+
+          <div id="upcoming-music-events">
+            <h3 style="color:white">music events</h3>
+            <br>
+            <ul id="events">
+              <li><a href="https://www.facebook.com/events/170711463552722/" target="_blank">
+                <img src="../Pictures/Events/antibala.jpg">
+                <h3>Antibala 2018</h3>
+                <h3>Club Maze</h3>
+                <h3>26.05 | 18:00</h3>
+              </a>
+              </li>
+              <li><img src="" alt="">
+                <h3></h3>
+                <h3></h3>
+                <h3></h3>
+              </li>
+              <li><img src="" alt="">
+                <h3></h3>
+                <h3></h3>
+                <h3></h3>
+              </li>
+            </ul>
+          </div>
+
+
+          <div id="upcoming-arts-events">
+            <h3 style="color:white">arts events</h3>
+            <br>
+
+          </div>
+        </div>
+        <div id = "contents">
+          <!-- <h1 style="color:white">here is the recent news and updates tab</h1>  -->
+            
+          <!-- here should be added yielding -->
+          <%= yield %>
+
+        </div>  
+      </div>  
+    <div id = "footer">
+      <div id="footer-img"></div>
+      <div id = "credits">†Ore ℗©. All rights reserved.</div>
+    </div>
+    
+  </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+  </body>
+</html>

@@ -3,8 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.3'
 
-
+#Use TablePrint for displaying db tables
+gem "table_print"
+#Use Thredded for forums
 gem 'thredded', '~> 0.14.4'
+#Use Devise for authentication
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
