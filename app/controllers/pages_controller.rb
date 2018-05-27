@@ -1,10 +1,15 @@
 class PagesController < ApplicationController
+	
+	before_action :set_artist
+
+	def set_artist
+		@artists = Artist.all
+	end
+
 	def index
-		
 	end
 
 	def our_team
-		@var = 15
 	end
 
 	def sound_managers
@@ -15,8 +20,6 @@ class PagesController < ApplicationController
 
 	def arts_managers
 	end
-
-
 
 	def artists
 	end
