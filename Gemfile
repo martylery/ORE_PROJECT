@@ -9,6 +9,8 @@ gem "table_print"
 gem 'thredded', '~> 0.14.4'
 #Use Devise for authentication
 gem 'devise'
+#use CarrierWave for uploading content from admin
+gem 'carrierwave', '~> 1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
