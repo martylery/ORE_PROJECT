@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   get '/merch', to: 'pages#merch'
   get '/contacts', to: 'pages#contacts'
   get '/forum', to: 'pages#forum'
+
+  get '/admin', to: 'admins#maintainer'
 end

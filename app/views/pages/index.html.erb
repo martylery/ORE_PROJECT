@@ -1,19 +1,19 @@
 
 <h1>NEWS</h1>
 	<ul id="content-wrapper">
-		<li>
-			<% @news.each do |new| %>
-			<div id="imagefield">
-				<%= image_tag(new.coverart_url) %>
-			</div>
-			
-			<div id="textfield">
-				<i><%= truncate(new.description, length: 200) %></i>
-			</div>
-					<!-- <a href="" id="learn-more">learn more</a> -->
-				<%= link_to "read More", new.read_more, id: "learn-more" %>
-			<% end %>
-		</li>
+		<% @news.each do |new| %>
+			<li>
+				<div id="imagefield">
+					<%= image_tag(new.coverart_url) %>
+				</div>
+				
+				<div id="textfield">
+					<i><%= truncate(new.description, length: 200) %></i>
+				</div>
+						<!-- <a href="" id="learn-more">learn more</a> -->
+					<%= link_to "read More", new.read_more, id: "learn-more" %>
+			</li>
+		<% end %>
 	</ul>
 	
 
