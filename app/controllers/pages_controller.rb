@@ -5,8 +5,12 @@ class PagesController < ApplicationController
 	def set_content
 		@artists = Artist.first(4)
 		@works = Work.first(4)
+		# this should be thrown in loop, where the first 5 objects are shown
 		@highlights = Highlight.first(5)
-		@events = Event.first(4)
+
+		@music_events = Event.where("artist_type = 'music'").first(3)
+
+		@arts_events = Event.where("artist_type = 'arts'").first(3)
 	end
 
 	def index
