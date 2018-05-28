@@ -5,6 +5,8 @@ class PagesController < ApplicationController
 	def set_content
 		@artists = Artist.first(4)
 		@works = Work.first(4)
+		@highlights = Highlight.first(5)
+		@events = Event.first(4)
 	end
 
 	def index

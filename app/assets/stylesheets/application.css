@@ -236,9 +236,6 @@ h5 {
 
 
 
-
-
-
 #right-bar{
 	position: absolute;
 	width: 350px;
@@ -262,6 +259,9 @@ h5 {
 	margin: 0 auto;
 }
 
+#highlights img:hover {
+	opacity: 0.8;
+}
 
 #upcoming-music-events {
 	position: relative;
