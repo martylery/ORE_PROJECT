@@ -14,6 +14,7 @@ class PagesController < ApplicationController
 	end
 
 	def index
+		@news = New.first(10)
 	end
 
 	def our_team

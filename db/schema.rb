@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_28_163038) do
+ActiveRecord::Schema.define(version: 2018_05_28_173306) do
 
   create_table "artists", force: :cascade do |t|
     t.string "artist_name"
@@ -50,6 +50,21 @@ ActiveRecord::Schema.define(version: 2018_05_28_163038) do
     t.string "content_url"
     t.string "event_name"
     t.string "coverart_url"
+  end
+
+  create_table "merchitems", force: :cascade do |t|
+    t.string "description"
+    t.string "thumbnail", default: "Misc/vinyl.png"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string "coverart_url"
+    t.text "description"
+    t.string "read_more"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pages", force: :cascade do |t|

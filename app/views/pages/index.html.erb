@@ -1,1 +1,28 @@
-<h1>index</h1>
+
+<h1>NEWS</h1>
+	<ul id="content-wrapper">
+		<li>
+			<% @news.each do |new| %>
+			<div id="imagefield">
+				<%= image_tag(new.coverart_url) %>
+			</div>
+			
+			<div id="textfield">
+				<i><%= truncate(new.description, length: 200) %></i>
+			</div>
+					<!-- <a href="" id="learn-more">learn more</a> -->
+				<%= link_to "read More", new.read_more, id: "learn-more" %>
+			<% end %>
+		</li>
+	</ul>
+	
+
+	<h1>Merch</h1>
+	<div id="merch-wrapper">
+			<div id="left-side">
+				
+			</div>
+			<div id="right-side">
+				
+			</div>
+	</div>

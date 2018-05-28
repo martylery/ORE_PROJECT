@@ -1,0 +1,2 @@
+class Merchitem < ApplicationRecord
+end
