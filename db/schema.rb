@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_28_211438) do
+ActiveRecord::Schema.define(version: 2018_05_28_213040) do
 
   create_table "artists", force: :cascade do |t|
     t.string "artist_name", null: false
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 2018_05_28_211438) do
     t.text "bio"
     t.string "coverart_url"
     t.string "content_url"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "event_name", null: false
+    t.string "artist_type", default: "music", null: false
+    t.string "coverart_url"
+    t.string "event_url"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
