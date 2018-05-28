@@ -1,3 +1,3 @@
 class Work < ApplicationRecord
-	belongs_to: artist, index: true
+	belongs_to :artists, optional: true
 end

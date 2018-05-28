@@ -1,9 +1,10 @@
 class PagesController < ApplicationController
 	
-	before_action :set_artist
+	before_action :set_content
 
-	def set_artist
-		@artists = Artist.all
+	def set_content
+		@artists = Artist.first(4)
+		@works = Work.first(4)
 	end
 
 	def index
