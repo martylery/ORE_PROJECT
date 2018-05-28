@@ -5,9 +5,10 @@
 
 
 #content-wrapper {
+	/*border: 2px dotted blue;*/
 	list-style-type: none;
-	border: 2px dotted blue;
 	height: 45%;
+	border-bottom: 2px dashed gray;
 }
 
 #content-wrapper li{
@@ -58,7 +59,7 @@
 }
 
 #merch-wrapper {
-	border: 2px dotted red;
+	/*border: 2px dotted red;*/
 	position: relative;
 	margin: 0 auto;
 	height: 42%;
@@ -71,46 +72,18 @@
 	text-align: center;
 }
 
-#left-side, #right-side {
+/*#left-side, #right-side {
 	height: 100%;
 	width: 47.5%
-}
+}*/
 
-#left-side {
-	position: absolute;
+/*#left-side {
 	border: 2px dotted green;
+	position: absolute;
 }
 
 #right-side {
-	position: absolute;
 	border: 2px dotted green;
+	position: absolute;
 	margin-left: 52%;
-}
-
-
-#merch1, #merch2, #merch3 {
-	/*border: 2px dotted yellow;*/
-	position: relative;
-	width: 100%;
-	height: 30%;
-	/*background-color: #090909;*/
-	overflow: hidden;
-	display: inline-block;
-	text-align: center;
-	border-top: 2px dotted #282828;
-	/*border-bottom: 2px dotted #282828;*/
-}
-
-#merch1:hover, #merch2:hover, #merch3:hover {
-	opacity: 0.5;
-}
-
-#merch1 img, #merch2 img, #merch3 img {
-	max-height: 80%;
-	max-width: 80%;
-	
-}
-
-#merch1, #merch2 {
-	margin-bottom: 12%;
-}
+}*/
