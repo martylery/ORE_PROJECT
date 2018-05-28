@@ -10,26 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_28_192536) do
+ActiveRecord::Schema.define(version: 2018_05_28_211438) do
 
   create_table "artists", force: :cascade do |t|
-    t.string "artist_name"
+    t.string "artist_name", null: false
+    t.string "artist_type", null: false
     t.text "bio"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "artist_type"
     t.string "coverart_url"
     t.string "content_url"
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "content_url"
-    t.string "event_name"
-    t.string "coverart_url"
-    t.string "artist_type"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -45,35 +33,25 @@ ActiveRecord::Schema.define(version: 2018_05_28_192536) do
   end
 
   create_table "highlights", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "event_name", null: false
     t.string "content_url"
-    t.string "event_name"
-    t.string "coverart_url"
   end
 
   create_table "managers", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.string "manager_scope"
     t.text "bio"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "thumbnail_url"
   end
 
   create_table "merchitems", force: :cascade do |t|
-    t.string "description"
-    t.string "thumbnail", default: "Misc/vinyl.png"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text "description"
+    t.string "thumbnail", default: "Misc/vinyl.jpg"
   end
 
   create_table "news", force: :cascade do |t|
     t.string "coverart_url"
     t.text "description"
-    t.string "read_more"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "pages", force: :cascade do |t|
@@ -321,11 +299,9 @@ ActiveRecord::Schema.define(version: 2018_05_28_192536) do
   end
 
   create_table "works", force: :cascade do |t|
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "coverart_url"
     t.string "name"
+    t.text "description"
+    t.string "coverart_url"
     t.string "content_url"
   end
 
