@@ -18,12 +18,12 @@ class ArtistsController < ApplicationController
 	end
 
 	def show
-		@artis = Artist.find(params[:id])
+		@artist = Artist.find(params[:id])
 	end
 
 	private
 	def artist_params
-		params.	require(:artist).permit(:artist_name, :artist_type, :bio)
+		params.	require(:artist).permit(:artist_name, :artist_type, :bio, :coverart_url, :content_url)
 	end
 
 

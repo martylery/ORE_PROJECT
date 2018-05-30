@@ -22,6 +22,10 @@ Rails.application.routes.draw do
   get '/forum', to: 'pages#forum'
 
   get '/admin', to: 'admins#index'
+
   get '/admin/artists', to: 'artists#new'
   post '/artists', to: 'artists#create'
+
+  get '/admin/news', to: 'news#new'
+  post '/news', to: 'news#create'
 end

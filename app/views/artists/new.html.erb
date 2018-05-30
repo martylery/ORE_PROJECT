@@ -2,12 +2,29 @@
 <hr>
 
 <%= form_for @artist do |f| %>
+	<%= f.label :artist_name %>
+	<br>
 	<%= f.text_field :artist_name %>
+	<br>
+	<%= f.label :artist_type %>
 	<br>
 	<%= f.text_field :artist_type %>
 	<br>
-	<%= f.text_area :bio %>
-
+	<%= f.label :coverart_url %>
 	<br>
+	<%= f.text_field :coverart_url %>
+	<br>
+	<%= f.label :content_url %>
+	<br>
+	<%= f.text_field :content_url %>
+	<br>
+	<br>
+	<%= f.label :bio %>
+	<br>
+	<%= f.text_area :bio %>
+	<br>
+	<br>
+	<br>
+
 	<%= f.submit %>
 <% end %>

@@ -1,0 +1,19 @@
+<h1>Artists table manager</h1>
+<hr>
+
+<%= form_for @newfeed do |f| %>
+
+	<%= f.label :coverart_url %>
+	<br>
+	<%= f.text_field :coverart_url %>
+	<br>
+	<br>
+	<%= f.label :description %>
+	<br>
+	<%= f.text_area :description %>
+	<br>
+	<br>
+	<br>
+
+	<%= f.submit %>
+<% end %>
