@@ -30,6 +30,7 @@ class PagesController < ApplicationController
 	end
 
 	def artists
+		render 'artists/show'
 	end
 
 	def photographers

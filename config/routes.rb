@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/pages/arts_managers', to: 'pages#arts_managers'
 
 
-  get '/pages/artists', to: 'pages#artists'
+  get '/artists', to: 'pages#artists'
   get '/pages/photographers', to: 'pages#photographers'
   get '/pages/musicians', to: 'pages#musicians'
   get '/pages/arts', to: 'pages#arts'
@@ -21,5 +21,7 @@ Rails.application.routes.draw do
   get '/contacts', to: 'pages#contacts'
   get '/forum', to: 'pages#forum'
 
-  get '/admin', to: 'admins#maintainer'
+  get '/admin', to: 'admins#index'
+  get '/admin/artists', to: 'artists#new'
+  post '/artists', to: 'artists#create'
 end

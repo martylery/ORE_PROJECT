@@ -1,0 +1,13 @@
+<h1>Artists table manager</h1>
+<hr>
+
+<%= form_for @artist do |f| %>
+	<%= f.text_field :artist_name %>
+	<br>
+	<%= f.text_field :artist_type %>
+	<br>
+	<%= f.text_area :bio %>
+
+	<br>
+	<%= f.submit %>
+<% end %>
