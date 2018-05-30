@@ -59,7 +59,7 @@
             <ul id="artists-releases">
 
 
-              <% @artist.each do |artist| %>
+              <% @artists.each do |artist| %>
                 <li>
                   <h5><%= artist.artist_name %></h5>
                   <%= image_tag(artist.coverart_url) %><!-- set link to artist! -->

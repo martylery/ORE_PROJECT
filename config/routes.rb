@@ -28,4 +28,8 @@ Rails.application.routes.draw do
 
   get '/admin/news', to: 'news#new'
   post '/news', to: 'news#create'
+
+  get 'admin/merchitems', to: 'merchitems#new'
+  post '/merchitems', to: 'merchitems#create'
+
 end
