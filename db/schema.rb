@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2018_05_28_220052) do
     t.string "artist_name", null: false
     t.string "artist_type", null: false
     t.text "bio"
-    t.string "coverart_url"
+    t.string "coverart_url", default: "Coverart/anonymous-avatar-sm.jpg"
     t.string "content_url"
   end
 

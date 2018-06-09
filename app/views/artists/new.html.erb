@@ -4,19 +4,19 @@
 <%= form_for @artist do |f| %>
 	<%= f.label :artist_name %>
 	<br>
-	<%= f.text_field :artist_name %>
+	<%= f.text_field :artist_name, :required => true %>
 	<br>
 	<%= f.label :artist_type %>
 	<br>
-	<%= f.text_field :artist_type %>
+	<%= f.select :artist_type, ['music', 'arts', 'photography'] %>
 	<br>
 	<%= f.label :coverart_url %>
 	<br>
-	<%= f.text_field :coverart_url %>
+	<%= f.text_field :coverart_url, :required => true %>
 	<br>
 	<%= f.label :content_url %>
 	<br>
-	<%= f.text_field :content_url %>
+	<%= f.text_field :content_url, :required => true %>
 	<br>
 	<br>
 	<%= f.label :bio %>
